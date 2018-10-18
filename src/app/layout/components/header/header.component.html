@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg fixed-top">
-    <a class="navbar-brand" href="#">Váleria Admin</a>
+    <a class="navbar-brand" href="#">Valeria Admin</a>
     <button class="navbar-toggler" type="button" (click)="toggleSidebar()">
         <!-- <span class="navbar-toggler-icon"></span> -->
         <i class="fa fa-bars text-muted" aria-hidden="true"></i>
@@ -90,30 +90,13 @@
                     <i class="fa fa-language"></i> {{ 'Language' | translate }} <b class="caret"></b>
                 </a>
                 <div class="dropdown-menu-right" ngbDropdownMenu>
+                    <a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('pt')">
+                        {{ 'Portugues' | translate }}
+                    </a>
                     <a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('en')">
                         {{ 'English' | translate }}
                     </a>
-                    <a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('fr')">
-                        {{ 'French' | translate }}
-                    </a>
-                    <a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('ur')">
-                        {{ 'Urdu' | translate }}
-                    </a>
-                    <a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('es')">
-                        {{ 'Spanish' | translate }}
-                    </a>
-                    <a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('it')">
-                        {{ 'Italian' | translate }}
-                    </a>
-                    <a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('fa')">
-                        {{ 'Farsi' | translate }}
-                    </a>
-                    <a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('de')">
-                        {{ 'German' | translate }}
-                    </a>
-                    <a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('zh-CHS')">
-                        {{ 'Simplified Chinese' | translate }}
-                    </a>
+                    
                 </div>
             </li>
             <li class="nav-item dropdown" ngbDropdown>

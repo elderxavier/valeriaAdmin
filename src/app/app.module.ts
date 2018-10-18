@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 // AoT requires an exported function for factories
 export const createTranslateLoader = (http: HttpClient) => {
     /* for development
@@ -34,10 +36,10 @@ export const createTranslateLoader = (http: HttpClient) => {
                 deps: [HttpClient]
             }
         }),
-        AppRoutingModule
+        AppRoutingModule,
     ],
     declarations: [AppComponent],
-    providers: [AuthGuard],
-    bootstrap: [AppComponent]
+    providers: [AuthGuard, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}
